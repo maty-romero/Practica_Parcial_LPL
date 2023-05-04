@@ -5,23 +5,23 @@ h1{
 #tablero{
 	width: 50%; 
 	position: absolute; 
-	top: 10px;
-	left: 300px;
+	top: 10%;
+	left: 25%;
 }
 
 #leyenda{
 	width: 50%;
 	position: absolute;
-	left: 600px; 
-	top: 10px;
+	left: 45%; 
+	top: 10%;
 	
 }
 #contenedor{
 	position: relative; 
-	left: 20px;
+	left: 10%;
 }
 footer{
 	position: fixed;
 	bottom: 0;
-	left: 40px;
+	left: 45%;
 }
