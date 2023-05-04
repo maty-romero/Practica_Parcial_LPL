@@ -2,11 +2,25 @@ h1{
 	text-align: center; 
 }
 
-.tablero{
-	width: 50%;
+#tablero{
+	width: 50%; 
+	position: absolute; 
+	top: 10%;
 }
 
-.leyenda{
+#leyenda{
 	width: 50%;
-	float: left;
+	position: absolute;
+	left: 40%; 
+	top: 10%;
+	
+}
+#contenedor{
+	position: relative; 
+	left: 20%;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 40%;
 }
