@@ -6,12 +6,13 @@ h1{
 	width: 50%; 
 	position: absolute; 
 	top: 10px;
+	left: 300px;
 }
 
 #leyenda{
 	width: 50%;
 	position: absolute;
-	left: 40px; 
+	left: 600px; 
 	top: 10px;
 	
 }
