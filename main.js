@@ -41,14 +41,14 @@ function evaluarTirada(){
 	var btn2 = pilaBtnSeleccionados[1];
 	//se acerto la jugada 
 	if(btn1.value == btn2.value){ 
-		//mostrarResultadoTirada();
+		mostrarResultadoTirada(true);
 	}else{ 
 		ocultarCarta(btn1);
 		ocultarCarta(btn2);
 		//habilito cartas para seguir juegando 
 		habilitarCarta(btn1);
 		habilitarCarta(btn2);
-		//mostrarResultadoTirada();
+		mostrarResultadoTirada(false);
 	}
 	//finalizarTirada(); 
 	
@@ -56,10 +56,11 @@ function evaluarTirada(){
 
 function mostrarResultadoTirada(acierto){
 	//se acerto la jugada
+	mensaje = document.getElementById("mensajePartida");
 	if(acierto){
-		
+		mensaje.innerHTML = "ACIERTO!"
 	}else{
-		
+		mensaje.innerHTML = "NO HAY ACIERTO!"
 	}
 }
 
