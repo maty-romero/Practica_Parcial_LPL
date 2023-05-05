@@ -6,26 +6,22 @@ function iniciarJuego(){
 	var botones = document.getElementsByClassName("carta");
 	for(let i=0; i<botones.length; i++){
 		botones[i].addEventListener("click", function(){
-			cartaSeleccionada(botones[i].value);
+			cartaSeleccionada(botones[i]);
 		});
 	}
 }
 
-function cartaSeleccionada(valorBtn){
-	var botones = document.getElementsByClassName("carta");
-	//busco que boton hizo click 
-	for(let i=0; i<botones.length; i++){
-		console.log("no hay coincidencia");
-		if(botones[i].value == valorBtn){
-			console.log("hay coincidencia");
-			pilaBtnSeleccionados.push(botones[i]);
-			break; 
-		}	
-	}
+
+function cartaSeleccionada(boton){
+	//var botones = document.getElementsByClassName("carta");
+	
+	pilaBtnSeleccionados.push(boton);	
+	
 	console.log(pilaBtnSeleccionados.length);
-	deshabilitarCarta(pilaBtnSeleccionados.peek) //deshabilito la ultima carta 
+	deshabilitarCarta(boton);
+	//deshabilitarCarta(pilaBtnSeleccionados[pilaBtnSeleccionados.length - 1]) //deshabilito la ultima carta 
 	//si hay 2 botones seleccionados -> evaluo
-	if(pilaBtnSeleccionados.length == 1){
+	if(pilaBtnSeleccionados.length == 2){
 		evaluarTirada();
 	}
 }
@@ -33,6 +29,8 @@ function cartaSeleccionada(valorBtn){
 function deshabilitarCarta(boton){
 	boton.disabled = true; 
 }
+
+
 
 
 
