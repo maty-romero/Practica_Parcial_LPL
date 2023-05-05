@@ -1,24 +1,36 @@
 h1{
 	text-align: center; 
 }
-
+.carta{
+	width: 65px;
+	height: 65px
+}
 #tablero{
 	width: 50%; 
 	position: absolute; 
-	top: 10vw;
+	top: 3vw;
 }
 
 #leyenda{
 	width: 50%;
 	position: absolute;
 	left: 40vw; 
-	top: 10vw;
+	top: 3vw;
 	
 }
 #contenedor{
 	position: relative; 
 	left: 20vw;
 }
+#btnInicioJuego{
+	width: 15%;
+	height: 25px;
+}
+#btnFinalizarJuego{
+	width: 20%;
+	height: 25px;
+}
+
 footer{
 	position: fixed;
 	bottom: 0;
