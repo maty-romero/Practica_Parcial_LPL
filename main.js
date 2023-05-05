@@ -26,13 +26,13 @@ function cartaSeleccionada(boton){
 	}
 }
 
-	function deshabilitarCarta(boton){
+
 function mostrarCarta(boton){
 	boton.innerHTML = boton.value; 
 }
 
 function ocultarCarta(boton){
-	boton.innerHTML = ""; 
+	boton.innerHTML = "0"; 
 }
 
 function evaluarTirada(){
@@ -40,16 +40,17 @@ function evaluarTirada(){
 	var btn2 = pilaBtnSeleccionados[1];
 	//se acerto la jugada 
 	if(btn1.value == btn2.value){ 
-		mostrarResultadoTirada();
+		//mostrarResultadoTirada();
 	}else{ 
 		ocultarCarta(btn1);
-		ocultarCarta(btn1);
+		ocultarCarta(btn2);
 		//habilito cartas para seguir juegando 
 		habilitarCarta(btn1);
 		habilitarCarta(btn2);
+		//mostrarResultadoTirada();
 	}
-	finalizarTirada(); 
-	mostrarResultadoTirada();
+	//finalizarTirada(); 
+	
 }
 
 function mostrarResultadoTirada(acierto){
@@ -86,10 +87,10 @@ function deshabilitarCarta(boton){
 		botones[i].disabled=true;
 	}
 		var divLeyenda= document.getElementById("leyenda");
-    var pFinalizarJuego = document.createElement("p");
-	pFinalizarJuego.innerHTML="FIN DEL JUEGO"
-	pFinalizarJuego.id="idPfinalizarJuego"
-	divLeyenda.appendChild(pFinalizarJuego);
+		var pFinalizarJuego = document.createElement("p");
+		pFinalizarJuego.innerHTML="FIN DEL JUEGO"
+		pFinalizarJuego.id="idPfinalizarJuego"
+		divLeyenda.appendChild(pFinalizarJuego);
 	}
 
 
