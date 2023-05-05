@@ -10,7 +10,12 @@ var pilaBtnSeleccionados = [];
 		});
 	}
 	//habilito los botones pues si el usuario apretó antes el boton FinalizarJuego(), me quedarían todos deshabilitados al apretar iniciarJuego
-	habilitarBotones();
+	habilitarBotones();	
+	
+	
+//	var leyenda = document.getElementById("leyenda");
+//	eliminoMensajesPartidaPasada();
+	
 	
 }
 
@@ -41,6 +46,7 @@ function evaluarTirada(){
 	var btn2 = pilaBtnSeleccionados[1];
 	//se acerto la jugada 
 	if(btn1.value == btn2.value){ 
+		aciertos++;
 		mostrarResultadoTirada(true);
 	}else{ 
 		ocultarCarta(btn1);
@@ -50,9 +56,16 @@ function evaluarTirada(){
 		habilitarCarta(btn2);
 		mostrarResultadoTirada(false);
 	}
-	//finalizarTirada(); 
+		intentos++;
+
+	finalizarTirada(); 
 	
 }
+
+	function finalizarTirada () {
+		pilaBtnSeleccionados.pop();
+		pilaBtnSeleccionados.pop();
+	}
 
 function mostrarResultadoTirada(acierto){
 	//se acerto la jugada
@@ -83,7 +96,7 @@ function deshabilitarCarta(boton){
 	
 	}
 
-	function finalizaJuego() {
+	function presionarFinalizarJuego() {
 	var botones = document.getElementsByClassName("carta");
 		for(let i=0; i<botones.length; i++){
 		botones[i].disabled=true;
@@ -96,6 +109,11 @@ function deshabilitarCarta(boton){
 	}
 
 
-
+	function eliminoMensajesPartidaPasada() {
+	var divLeyenda = document.getElementById("leyenda");
+	var pHijo= document.getElementById("idPfinalizarJuego");
+	divLeyenda.removeChild(pHijo);		
+		
+	}
 
 
