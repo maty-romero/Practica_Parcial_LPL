@@ -16,7 +16,6 @@ h1{
 	position: absolute;
 	left: 40vw; 
 	top: 3vw;
-	
 }
 #contenedor{
 	position: relative; 
@@ -35,4 +34,10 @@ footer{
 	position: fixed;
 	bottom: 0;
 	left: 40vw;
+}
+#mensajePartida {
+}
+
+#idPfinalizarJuego{
+	font-size:40px;
 }
