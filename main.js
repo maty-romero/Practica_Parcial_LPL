@@ -24,16 +24,17 @@ function cartaSeleccionada(boton){
 	if(pilaBtnSeleccionados.length == 2){
 		evaluarTirada();
 	}
-}
+	}
 
 
 function mostrarCarta(boton){
 	boton.innerHTML = boton.value; 
 }
 
-function ocultarCarta(boton){
+	function ocultarCarta(boton){
 	boton.innerHTML = "0"; 
-}
+	
+	}
 
 function evaluarTirada(){
 	var btn1 = pilaBtnSeleccionados[0];
