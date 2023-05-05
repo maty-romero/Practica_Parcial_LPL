@@ -20,16 +20,18 @@ function cartaSeleccionada(valorBtn){
 			break; 
 		}	
 	}
-	deshabilitarCarta(pilaBtnSeleccionados.peek()) //deshabilito la ultima carta 
+	deshabilitarCarta(pilaBtnSeleccionados.peek) //deshabilito la ultima carta 
 	//si hay 2 botones seleccionados -> evaluo
 	if(pilaBtnSeleccionados.length == 1){
 		evaluarTirada();
 	}
 }
 
-function deshabilitarCarta(boton){
+	function deshabilitarCarta(boton){
 	boton.disable = true; 
-}
+	
+	
+	}
 
 
 
