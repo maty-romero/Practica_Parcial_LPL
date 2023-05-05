@@ -12,15 +12,18 @@ function iniciarJuego(){
 }
 
 function cartaSeleccionada(valorBtn){
-	var botones = document.getElementsByClassName("");
+	var botones = document.getElementsByClassName("carta");
 	//busco que boton hizo click 
 	for(let i=0; i<botones.length; i++){
+		console.log("no hay coincidencia");
 		if(botones[i].value == valorBtn){
+			console.log("hay coincidencia");
 			pilaBtnSeleccionados.push(botones[i]);
 			break; 
 		}	
 	}
-	deshabilitarCarta(pilaBtnSeleccionados.peek()) //deshabilito la ultima carta 
+	console.log(pilaBtnSeleccionados.length);
+	deshabilitarCarta(pilaBtnSeleccionados.peek) //deshabilito la ultima carta 
 	//si hay 2 botones seleccionados -> evaluo
 	if(pilaBtnSeleccionados.length == 1){
 		evaluarTirada();
@@ -28,7 +31,7 @@ function cartaSeleccionada(valorBtn){
 }
 
 function deshabilitarCarta(boton){
-	boton.disable = true; 
+	boton.disabled = true; 
 }
 
 
