@@ -36,10 +36,9 @@ function mostrarCarta(boton){
 	boton.innerHTML = boton.value; 
 }
 
-	function ocultarCarta(boton){
+function ocultarCarta(boton){
 	boton.innerHTML = "0"; 
-	
-	}
+}
 
 function evaluarTirada(){
 	var btn1 = pilaBtnSeleccionados[0];
@@ -56,16 +55,16 @@ function evaluarTirada(){
 		habilitarCarta(btn2);
 		mostrarResultadoTirada(false);
 	}
-		intentos++;
+	intentos++;
 
 	finalizarTirada(); 
 	
 }
 
-	function finalizarTirada () {
-		pilaBtnSeleccionados.pop();
-		pilaBtnSeleccionados.pop();
-	}
+function finalizarTirada () {
+	pilaBtnSeleccionados.pop();
+	pilaBtnSeleccionados.pop();
+}
 
 function mostrarResultadoTirada(acierto){
 	//se acerto la jugada
@@ -74,6 +73,23 @@ function mostrarResultadoTirada(acierto){
 		mensaje.innerHTML = "ACIERTO!"
 	}else{
 		mensaje.innerHTML = "NO HAY ACIERTO!"
+	}
+}
+
+//evaluo los aciertos al finalizar la partida. 
+function mostrarResultadoPartida(){
+	var mensaje = document.getElementById("mensajePartida");
+	if(aciertos == 10){
+		mensaje.innerHTML = "EXCELENTE MEMORIA!!!"
+	}
+	if(aciertos == 8 || aciertos == 9){
+		mensaje.innerHTML = "MUY BUENA MEMORIA!!!"
+	}
+	if(aciertos == 6 || aciertos == 7){
+		mensaje.innerHTML = "BUENA MEMORIA!!! PUEDES MEJORAR!"
+	}
+	if(aciertos<6){
+		mensaje.innerHTML = "MALA MEMORIA!!! DEBES PRACTICAR MAS!"
 	}
 }
 
