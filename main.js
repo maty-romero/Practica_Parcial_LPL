@@ -13,6 +13,7 @@ function iniciarJuego(){
 
 function cartaSeleccionada(boton){
 	pilaBtnSeleccionados.push(boton);	
+	mostrarCarta(boton);
 	
 	deshabilitarCarta(boton);
 	
@@ -21,6 +22,41 @@ function cartaSeleccionada(boton){
 		evaluarTirada();
 	}
 }
+
+function mostrarCarta(boton){
+	boton.innerHTML = boton.value; 
+}
+
+function ocultarCarta(boton){
+	boton.innerHTML = ""; 
+}
+
+function evaluarTirada(){
+	var btn1 = pilaBtnSeleccionados[0];
+	var btn2 = pilaBtnSeleccionados[1];
+	//se acerto la jugada 
+	if(btn1.value == btn2.value){ 
+		mostrarResultadoTirada();
+	}else{ 
+		ocultarCarta(btn1);
+		ocultarCarta(btn1);
+		//habilito cartas para seguir juegando 
+		habilitarCarta(btn1);
+		habilitarCarta(btn2);
+	}
+	finalizarTirada(); 
+	mostrarResultadoTirada();
+}
+
+function mostrarResultadoTirada(acierto){
+	//se acerto la jugada
+	if(acierto){
+		
+	}else{
+		
+	}
+}
+
 
 function habilitarCarta(boton){
 	boton.disabled = false; 
