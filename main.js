@@ -2,7 +2,7 @@
 var aciertos, intentos, btn1, btn2;
 var pilaBtnSeleccionados = []; 
 
-function iniciarJuego{
+function iniciarJuego(){
 	var botones = document.getElementsByClassName("carta");
 	for(let i=0; i<botones.length; i++){
 		botones[i].addEventListener("click", function(){
@@ -26,5 +26,10 @@ function cartaSeleccionada(valorBtn){
 		evaluarTirada();
 	}
 }
+
+function deshabilitarCarta(boton){
+	boton.disable = true; 
+}
+
 
 
