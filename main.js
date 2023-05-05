@@ -11,19 +11,19 @@ function iniciarJuego(){
 	}
 }
 
-
 function cartaSeleccionada(boton){
-	//var botones = document.getElementsByClassName("carta");
-	
 	pilaBtnSeleccionados.push(boton);	
 	
-	console.log(pilaBtnSeleccionados.length);
 	deshabilitarCarta(boton);
-	//deshabilitarCarta(pilaBtnSeleccionados[pilaBtnSeleccionados.length - 1]) //deshabilito la ultima carta 
+	
 	//si hay 2 botones seleccionados -> evaluo
 	if(pilaBtnSeleccionados.length == 2){
 		evaluarTirada();
 	}
+}
+
+function habilitarCarta(boton){
+	boton.disabled = false; 
 }
 
 function deshabilitarCarta(boton){
