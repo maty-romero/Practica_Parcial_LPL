@@ -88,25 +88,25 @@ function deshabilitarCarta(boton){
 
 
 //habilito los botones
-	function habilitarBotones() {
+function habilitarBotones() {
 	var botones = document.getElementsByClassName("carta");
 	for(let i=0; i<botones.length; i++){
 		botones[i].disabled=false;	
 	}
 	
-	}
+}
 
 	function presionarFinalizarJuego() {
 	var botones = document.getElementsByClassName("carta");
-		for(let i=0; i<botones.length; i++){
+	for(let i=0; i<botones.length; i++){
 		botones[i].disabled=true;
 	}
-		var divLeyenda= document.getElementById("leyenda");
-		var pFinalizarJuego = document.createElement("p");
-		pFinalizarJuego.innerHTML="FIN DEL JUEGO"
-		pFinalizarJuego.id="idPfinalizarJuego"
-		divLeyenda.appendChild(pFinalizarJuego);
-	}
+	var divLeyenda= document.getElementById("leyenda");
+	var pFinalizarJuego = document.createElement("p");
+	pFinalizarJuego.innerHTML="El jugador termina el juego"
+	pFinalizarJuego.id="idPfinalizarJuego"
+	divLeyenda.appendChild(pFinalizarJuego);
+}
 
 
 	function eliminoMensajesPartidaPasada() {
